@@ -3,14 +3,14 @@
 ## What This Does
 - **`trial.proto`**: Protocol Buffers definition
 - **`trial.ts`**: Auto-generated TypeScript interfaces (from protoc-gen-ts_proto)
-- **`gen.ts`**: Builder pattern generator that reads .proto files
+- **`generator.ts`**: Builder pattern generator that reads .proto files
 - **`generated-builders.ts`**: Output - fluent builder classes
 
 ## How It Works
 
 1. **Proto Definition**: Define your data structures in `trial.proto`
 2. **TypeScript Generation**: Use protoc-gen-ts_proto to create `trial.ts`
-3. **Builder Generation**: Run `gen.ts` to create fluent builders
+3. **Builder Generation**: Run 'node generator.js trial.proto' to generate builder file
 4. **Usage**: Use the builders for clean object construction
 
 ## Example Usage
