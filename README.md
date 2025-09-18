@@ -3,7 +3,7 @@
 ## What This Does
 - **`trial.proto`**: Protocol Buffers definition
 - **`trial.ts`**: Auto-generated TypeScript interfaces (from protoc-gen-ts_proto)
-- **`generator.ts`**: Builder pattern generator that reads .proto files
+- **`updated_generator.ts`**: Builder pattern generator that reads .proto files
 - **`generated-builders.ts`**: Output - fluent builder classes
 
 ## How It Works
