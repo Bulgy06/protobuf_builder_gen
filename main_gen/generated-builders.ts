@@ -1,96 +1,112 @@
-import * as Gen from "./trial";
+import * as Gen1 from "./descriptor";
 
-export class PostBuilder{
-    private post: Partial<Gen.Post>={};
+export class PostBuilder {
+    private post: Partial<Gen1.trial.Post> = {};
 
-    setId(id:string):this{
-        this.post.id=id;
+    setId(id: string): this {
+        // Set the value for id
+        this.post.id = id;
         return this;
     }
 
-    setUsname(usname:string):this{
-        this.post.usname=usname;
+    setUsname(usname: string): this {
+        // Set the value for usname
+        this.post.usname = usname;
         return this;
     }
 
-    setContent(content:string):this{
-        this.post.content=content;
+    setContent(content: string): this {
+        // Set the value for content
+        this.post.content = content;
         return this;
     }
 
-    setTimestamp(timestamp:number):this{
-        this.post.timestamp=timestamp;
+    setTimestamp(timestamp: number): this {
+        // Set the value for timestamp
+        this.post.timestamp = timestamp;
         return this;
     }
 
-    build(): Gen.Post {
-        return Gen.Post.fromPartial(this.post);
+    build(): Gen1.trial.Post {
+        // Build the message from the current state
+        return Gen1.trial.Post.fromObject(this.post);
     }
 }
 
-export class UserBuilder{
-    private user: Partial<Gen.User>={};
+export class UserBuilder {
+    private user: Partial<Gen1.trial.User> = {};
 
-    setId(id:string):this{
-        this.user.id=id;
+    setId(id: string): this {
+        // Set the value for id
+        this.user.id = id;
         return this;
     }
 
-    setUsname(usname:string):this{
-        this.user.usname=usname;
+    setUsname(usname: string): this {
+        // Set the value for usname
+        this.user.usname = usname;
         return this;
     }
 
-    setAge(age:number):this{
-        this.user.age=age;
+    setAge(age: number): this {
+        // Set the value for age
+        this.user.age = age;
         return this;
     }
 
-    setAbout(about:string):this{
-        this.user.about=about;
+    setAbout(about: string): this {
+        // Set the value for about
+        this.user.about = about;
         return this;
     }
 
-    setStatus(status:Gen.ActStatus):this{
-        this.user.status=status;
+    setStatus(status: Gen1.trial.ActStatus): this {
+        // Set the value for status
+        this.user.status = status;
         return this;
     }
 
-    setPostlist(postlist:Gen.Post[]):this{
-        this.user.postlist=postlist;
+    setPostlist(postlist: Gen1.trial.Post[]): this {
+        // Set the value for postlist
+        this.user.postlist = postlist;
         return this;
     }
 
-    setFollowercount(followercount:number):this{
-        this.user.followercount=followercount;
+    setFollowercount(followercount: number): this {
+        // Set the value for followercount
+        this.user.followercount = followercount;
         return this;
     }
 
-    setEmail(email:string):this{
-        this.user.email=email;
+    setEmail(email: string): this {
+        // Set the value for email
+        this.user.email = email;
         return this;
     }
 
-    setPhone(phone:string):this{
-        this.user.phone=phone;
+    setPhone(phone: string): this {
+        // Set the value for phone
+        this.user.phone = phone;
         return this;
     }
 
-    build(): Gen.User {
-        return Gen.User.fromPartial(this.user);
+    build(): Gen1.trial.User {
+        // Build the message from the current state
+        return Gen1.trial.User.fromObject(this.user);
     }
 }
 
-export class UserlistBuilder{
-    private userlist: Partial<Gen.Userlist>={};
+export class UserlistBuilder {
+    private userlist: Partial<Gen1.trial.Userlist> = {};
 
-    setUsers(users:Gen.User[]):this{
-        this.userlist.users=users;
+    setUsers(users: Gen1.trial.User[]): this {
+        // Set the value for users
+        this.userlist.users = users;
         return this;
     }
 
-    build(): Gen.Userlist {
-        return Gen.Userlist.fromPartial(this.userlist);
+    build(): Gen1.trial.Userlist {
+        // Build the message from the current state
+        return Gen1.trial.Userlist.fromObject(this.userlist);
     }
 }
-

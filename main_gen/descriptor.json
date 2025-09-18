@@ -1,0 +1,85 @@
+{
+  "nested": {
+    "trial": {
+      "nested": {
+        "ActStatus": {
+          "values": {
+            "ONLINE": 0,
+            "IDLE": 1,
+            "INVISIBLE": 2
+          }
+        },
+        "Post": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "usname": {
+              "type": "string",
+              "id": 2
+            },
+            "content": {
+              "type": "string",
+              "id": 3
+            },
+            "timestamp": {
+              "type": "int64",
+              "id": 4
+            }
+          }
+        },
+        "User": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "usname": {
+              "type": "string",
+              "id": 2
+            },
+            "age": {
+              "type": "int32",
+              "id": 3
+            },
+            "about": {
+              "type": "string",
+              "id": 4
+            },
+            "status": {
+              "type": "ActStatus",
+              "id": 5
+            },
+            "postlist": {
+              "rule": "repeated",
+              "type": "Post",
+              "id": 6
+            },
+            "followercount": {
+              "type": "int32",
+              "id": 7
+            },
+            "email": {
+              "type": "string",
+              "id": 8
+            },
+            "phone": {
+              "type": "string",
+              "id": 9
+            }
+          }
+        },
+        "Userlist": {
+          "fields": {
+            "users": {
+              "rule": "repeated",
+              "type": "User",
+              "id": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}
